@@ -1,20 +1,35 @@
 ﻿using UnityEngine;
 
-public class CameraLook : MonoBehaviour
+public class PlayerCameraSync : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
-    public Transform playerCamera;
-    private float xRotation = 0f;
+    [SerializeField]
+    private Transform mainCameraTransform;
+
+    void Start()
+    {
+        // Automatically grab the main camera's transform at the start
+        if (Camera.main != null)
+        {
+            mainCameraTransform = Camera.main.transform;
+        }
+    }
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
+        if (mainCameraTransform == null) return;
 
-        transform.Rotate(Vector3.up * mouseX * mouseSensitivity * Time.deltaTime);
+        // 1. Get the direction the camera is looking
+        Vector3 cameraForward = mainCameraTransform.forward;
 
-        xRotation -= mouseY * mouseSensitivity * Time.deltaTime;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        // 2. Flatten it on the Y axis so the player doesn't tilt up/down into the ground
+        cameraForward.y = 0f;
+
+        // 3. Make sure the vector is valid before rotating
+        if (cameraForward.sqrMagnitude > 0.001f)
+        {
+            // 4. Create a rotation facing that direction and apply it to the player
+            Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
+            transform.rotation = targetRotation;
+        }
     }
 }

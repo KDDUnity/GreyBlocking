@@ -12,11 +12,12 @@ public class leverTrigger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !LeverActivated)
         {
             leverToActivate.SetActive(true);
             leverToDeactivate.SetActive(false);
             LeverActivated = true;
+            animator.SetBool("LeverActivated", true);
         }
         
     }

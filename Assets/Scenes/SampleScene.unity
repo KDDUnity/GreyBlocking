@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leverToActivate: {fileID: 1170410862}
   leverToDeactivate: {fileID: 919132148563637113}
-  myAnimator: {fileID: 141139579}
+  animator: {fileID: 141139579}
 --- !u!65 &480317301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3390,13 +3390,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556676595}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.61237246, y: 0.35355344, z: -0.35355335, w: 0.6123724}
-  m_LocalPosition: {x: -0.88, y: 0.3144397, z: -0}
+  m_LocalRotation: {x: -0.65053093, y: -0.27714476, z: 0.2771462, w: 0.65053093}
+  m_LocalPosition: {x: -0.713, y: 0.3144397, z: 0}
   m_LocalScale: {x: 3.9506097, y: 7.999999, z: 7.999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1170410863}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -136.151, y: 90, z: -90}
 --- !u!23 &1556676597
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3508,13 +3508,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745633843}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.61237246, y: 0.35355344, z: -0.35355335, w: 0.6123724}
-  m_LocalPosition: {x: -0.04, y: 0.82676464, z: -0}
+  m_LocalRotation: {x: -0.6766265, y: -0.20536883, z: 0.20536809, w: 0.676627}
+  m_LocalPosition: {x: -1.282, y: 0.915, z: -0}
   m_LocalScale: {x: 7.999999, y: 7.999999, z: 7.999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1170410863}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -123.768005, y: 90, z: -90}
 --- !u!23 &1745633845
 MeshRenderer:
   m_ObjectHideFlags: 0

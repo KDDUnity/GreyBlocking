@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class SpawnPointShiny : MonoBehaviour
 {
-    public int number1 = 3;
-    public int number2= 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
